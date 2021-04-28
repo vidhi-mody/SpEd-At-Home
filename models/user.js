@@ -24,6 +24,7 @@ const userSchema = new mongoose.Schema({
       type: String,
     },
   ],
+  answers: mongoose.Schema.Types.Mixed,
 });
 
 module.exports = mongoose.model("User", userSchema);

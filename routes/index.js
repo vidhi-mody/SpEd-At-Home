@@ -1,8 +1,6 @@
 const express = require("express");
-const threeToFive = require("../data/three-to-five");
-const SixToEight = require("../data/six-to-eight");
 const User = require("../models/user");
-const sixToEight = require("../data/six-to-eight");
+const util = require("../util");
 const router = express.Router();
 
 const context = {
@@ -16,7 +14,6 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/general", async function (req, res, next) {
-  console.log(req.body);
   const user = req.session.user;
   const { firstName, lastName, age, reasonForReferral } = req.body;
 
@@ -60,22 +57,36 @@ router.post("/academic", async (req, res, next) => {
 router.get("/academic-details", async (req, res, next) => {
   const { user } = req.session;
 
-  let questions = threeToFive;
-
-  switch (user.age) {
-    case "3-5":
-      questions = threeToFive;
-      break;
-    case "6-8":
-      questions = sixToEight;
-      break;
-  }
+  let questions = util.getQuestionsByAge(user.age);
 
   res.render("academic-details", {
     ...context,
     user,
     questions,
     academic: new Set(user.academic),
+  });
+});
+
+router.post("/academic-details", async (req, res, next) => {
+  const { user } = req.session;
+  const academic = new Set(user.academic);
+
+  const answers = util.populateAnswers(user.age, academic, req.body);
+
+  await User.updateOne(
+    { userId: user.userId },
+    {
+      answers,
+    }
+  );
+
+  res.redirect("/thank-you");
+});
+
+router.get("/thank-you", async (req, res, next) => {
+  req.session.destroy();
+  res.render("thank-you", {
+    ...context,
   });
 });
 

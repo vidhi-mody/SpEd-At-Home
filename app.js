@@ -52,6 +52,10 @@ app.use((req, res, next) => {
 });
 
 const sessionChecker = async (req, res, next) => {
+  if (req.originalUrl === "/thank-you") {
+    return next();
+  }
+
   if (!req.session.user || !req.cookies.sid) {
     const user = await User.create({
       userId: nanoid(),

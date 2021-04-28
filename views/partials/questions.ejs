@@ -10,13 +10,13 @@
                     <%= questions.oral[i] %>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="ol<%= i+1 %>" id="ol<%= i+1 %>-yes"
+                    <input type="radio" class="form-check-input" name="oral<%= i+1 %>" id="oral<%= i+1 %>-yes"
                         value="Yes" />
-                    <label class="form-check-label" for="ol<%= i+1 %>-yes">Yes</label>
+                    <label class="form-check-label" for="oral<%= i+1 %>-yes">Yes</label>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="ol<%= i+1 %>" id="ol<%= i+1 %>-no" value="No" />
-                    <label class="form-check-label" for="ol<%= i+1 %>-no">No</label>
+                    <input type="radio" class="form-check-input" name="oral<%= i+1 %>" id="oral<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="oral<%= i+1 %>-no">No</label>
                 </div>
             </div>
             <% } %>
@@ -31,12 +31,12 @@
                     <%= questions.reading[i] %>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="r<%= i+1 %>" id="r<%= i+1 %>-yes" value="Yes" />
-                    <label class="form-check-label" for="r<%= i+1 %>-yes">Yes</label>
+                    <input type="radio" class="form-check-input" name="reading<%= i+1 %>" id="reading<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="reading<%= i+1 %>-yes">Yes</label>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="r<%= i+1 %>" id="r<%= i+1 %>-no" value="No" />
-                    <label class="form-check-label" for="r<%= i+1 %>-no">No</label>
+                    <input type="radio" class="form-check-input" name="reading<%= i+1 %>" id="reading<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="reading<%= i+1 %>-no">No</label>
                 </div>
             </div>
             <% } %>
@@ -51,12 +51,12 @@
                     <%= questions.spelling[i] %>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="s<%= i+1 %>" id="s<%= i+1 %>-yes" value="Yes" />
-                    <label class="form-check-label" for="s<%= i+1 %>-yes">Yes</label>
+                    <input type="radio" class="form-check-input" name="spelling<%= i+1 %>" id="spelling<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="spelling<%= i+1 %>-yes">Yes</label>
                 </div>
                 <div class="form-check">
-                    <input type="radio" class="form-check-input" name="s<%= i+1 %>" id="s<%= i+1 %>-no" value="No" />
-                    <label class="form-check-label" for="s<%= i+1 %>-no">No</label>
+                    <input type="radio" class="form-check-input" name="spelling<%= i+1 %>" id="spelling<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="spelling<%= i+1 %>-no">No</label>
                 </div>
             </div>
             <% } %>
@@ -74,12 +74,12 @@
                 <%= questions.math[i] %>
             </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input" name="m<%= i+1 %>" id="m<%= i+1 %>-yes" value="Yes" />
-                <label class="form-check-label" for="m<%= i+1 %>-yes">Yes</label>
+                <input type="radio" class="form-check-input" name="math<%= i+1 %>" id="math<%= i+1 %>-yes" value="Yes" />
+                <label class="form-check-label" for="math<%= i+1 %>-yes">Yes</label>
             </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input" name="m<%= i+1 %>" id="m<%= i+1 %>-no" value="No" />
-                <label class="form-check-label" for="m<%= i+1 %>-no">No</label>
+                <input type="radio" class="form-check-input" name="math<%= i+1 %>" id="math<%= i+1 %>-no" value="No" />
+                <label class="form-check-label" for="math<%= i+1 %>-no">No</label>
             </div>
         </div>
         <% } %>
@@ -96,14 +96,58 @@
                 <%= questions.handwriting[i] %>
             </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input" name="h<%= i+1 %>" id="h<%= i+1 %>-yes" value="Yes" />
-                <label class="form-check-label" for="h<%= i+1 %>-yes">Yes</label>
+                <input type="radio" class="form-check-input" name="handwriting<%= i+1 %>" id="handwriting<%= i+1 %>-yes" value="Yes" />
+                <label class="form-check-label" for="handwriting<%= i+1 %>-yes">Yes</label>
             </div>
             <div class="form-check">
-                <input type="radio" class="form-check-input" name="h<%= i+1 %>" id="h<%= i+1 %>-no" value="No" />
-                <label class="form-check-label" for="h<%= i+1 %>-no">No</label>
+                <input type="radio" class="form-check-input" name="handwriting<%= i+1 %>" id="handwriting<%= i+1 %>-no" value="No" />
+                <label class="form-check-label" for="handwriting<%= i+1 %>-no">No</label>
             </div>
         </div>
         <% } %>
+</div>
+<% } %>
+<% if(academic.has("adhd-add")) { %>
+<div>
+    <div class="row g-3 my-2">
+        <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">ADD/ADHD (Inattentiveness)</span>
+        </h5>
+        <% for(let i=0; i<questions.inattentive.length; i++) { %>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <%= questions.inattentive[i] %>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="inattentive<%= i+1 %>" id="inattentive<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="inattentive<%= i+1 %>-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="inattentive<%= i+1 %>" id="inattentive<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="inattentive<%= i+1 %>-no">No</label>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <div class="row g-3 my-2">
+        <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">ADD/ADHD (Hyperactive - Impulsive)</span>
+        </h5>
+        <% for(let i=0; i<questions.hyperactiveImpulsive.length; i++) { %>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <%= questions.hyperactiveImpulsive[i] %>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="hyperactiveImpulsive<%= i+1 %>" id="hyperactiveImpulsive<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="hyperactiveImpulsive<%= i+1 %>-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="hyperactiveImpulsive<%= i+1 %>" id="hyperactiveImpulsive<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="hyperactiveImpulsive<%= i+1 %>-no">No</label>
+                </div>
+            </div>
+            <% } %>
+    </div>
 </div>
 <% } %>
