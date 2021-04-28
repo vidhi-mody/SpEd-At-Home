@@ -1,0 +1,103 @@
+<div>
+    <div class="row g-3 my-2">
+        <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Oral Language</span>
+        </h5>
+        <% for(let i=0; i<threeToFive.oral.length; i++) { %>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <%= threeToFive.oral[i] %>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="ol<%= i+1 %>" id="ol<%= i+1 %>-yes"
+                        value="Yes" />
+                    <label class="form-check-label" for="ol<%= i+1 %>-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="ol<%= i+1 %>" id="ol<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="ol<%= i+1 %>-no">No</label>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <div class="row g-3 my-2">
+        <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Reading</span>
+        </h5>
+        <% for(let i=0; i<threeToFive.reading.length; i++) { %>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <%= threeToFive.reading[i] %>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="r<%= i+1 %>" id="r<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="r<%= i+1 %>-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="r<%= i+1 %>" id="r<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="r<%= i+1 %>-no">No</label>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <div class="row g-3 my-2">
+        <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-primary">Spelling</span>
+        </h5>
+        <% for(let i=0; i<threeToFive.spelling.length; i++) { %>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <%= threeToFive.spelling[i] %>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="s<%= i+1 %>" id="s<%= i+1 %>-yes" value="Yes" />
+                    <label class="form-check-label" for="s<%= i+1 %>-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="s<%= i+1 %>" id="s<%= i+1 %>-no" value="No" />
+                    <label class="form-check-label" for="s<%= i+1 %>-no">No</label>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</div>
+<div class="row g-3 my-2">
+    <h5 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-primary">Math</span>
+    </h5>
+    <% for(let i=0; i<threeToFive.math.length; i++) { %>
+        <div class="col-md-12">
+            <div class="mb-3">
+                <%= threeToFive.math[i] %>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="m<%= i+1 %>" id="m<%= i+1 %>-yes" value="Yes" />
+                <label class="form-check-label" for="m<%= i+1 %>-yes">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="m<%= i+1 %>" id="m<%= i+1 %>-no" value="No" />
+                <label class="form-check-label" for="m<%= i+1 %>-no">No</label>
+            </div>
+        </div>
+        <% } %>
+</div>
+<div class="row g-3 my-2">
+    <h5 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-primary">Handwriting</span>
+    </h5>
+    <% for(let i=0; i<threeToFive.handwriting.length; i++) { %>
+        <div class="col-md-12">
+            <div class="mb-3">
+                <%= threeToFive.handwriting[i] %>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="h<%= i+1 %>" id="h<%= i+1 %>-yes" value="Yes" />
+                <label class="form-check-label" for="h<%= i+1 %>-yes">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="h<%= i+1 %>" id="h<%= i+1 %>-no" value="No" />
+                <label class="form-check-label" for="h<%= i+1 %>-no">No</label>
+            </div>
+        </div>
+        <% } %>
+</div>

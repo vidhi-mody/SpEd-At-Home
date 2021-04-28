@@ -19,7 +19,9 @@
           <div class="col-md">
             <form action="" class="needs-validation" novalidate="">
               <div class="row g-3">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <h4
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
                   <span class="text-primary">General Details</span>
                 </h4>
                 <div class="col-sm-6">
@@ -60,6 +62,7 @@
                         name="age"
                         type="radio"
                         class="form-check-input"
+                        value="3-5"
                         checked=""
                         required=""
                       />
@@ -73,6 +76,7 @@
                         name="age"
                         type="radio"
                         class="form-check-input"
+                        value="6-8"
                         required=""
                       />
                       <label class="form-check-label" for="age6to8"
@@ -85,6 +89,7 @@
                         name="age"
                         type="radio"
                         class="form-check-input"
+                        value="9-12"
                         required=""
                       />
                       <label class="form-check-label" for="age9to12"
@@ -94,50 +99,90 @@
                   </div>
                 </div>
               </div>
-              <hr class="my-3">
+              <hr class="my-3" />
               <div class="row g-3">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <h4
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
                   <span class="text-primary">Reason for Referral</span>
                 </h4>
                 <div class="col-md-12">
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="academic">
-                    <label class="form-check-label" for="academic">Academic</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="academic"
+                    />
+                    <label class="form-check-label" for="academic"
+                      >Academic</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="behavioural">
-                    <label class="form-check-label" for="behavioural">Behavioural</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="behavioural"
+                    />
+                    <label class="form-check-label" for="behavioural"
+                      >Behavioural</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="speech">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="speech"
+                    />
                     <label class="form-check-label" for="speech">Speech</label>
                   </div>
                 </div>
               </div>
-              <hr class="my-3">
+              <hr class="my-3" />
               <div class="row g-3">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <h4
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
                   <span class="text-primary">Academic</span>
                 </h4>
                 <div class="col-md-12">
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="language">
-                    <label class="form-check-label" for="language">Language</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="language"
+                    />
+                    <label class="form-check-label" for="language"
+                      >Language</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="math">
+                    <input type="checkbox" class="form-check-input" id="math" />
                     <label class="form-check-label" for="math">Math</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="handwriting">
-                    <label class="form-check-label" for="handwriting">Handwriting</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="handwriting"
+                    />
+                    <label class="form-check-label" for="handwriting"
+                      >Handwriting</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="adhd-add">
-                    <label class="form-check-label" for="adhd-add">ADHD/ADD</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="adhd-add"
+                    />
+                    <label class="form-check-label" for="adhd-add"
+                      >ADHD/ADD</label
+                    >
                   </div>
                 </div>
               </div>
+              <hr class="my-3" />
+              <%- include ("./partials/three-to-five") -%>
             </form>
           </div>
         </div>
