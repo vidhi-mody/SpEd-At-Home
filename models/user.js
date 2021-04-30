@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     },
   ],
   answers: mongoose.Schema.Types.Mixed,
-  scores: {
+  score: {
     math: Number,
     oral: Number,
     spelling: Number,

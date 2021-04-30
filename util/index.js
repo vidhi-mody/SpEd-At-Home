@@ -57,17 +57,18 @@ const populateAnswers = (age, academics, body) => {
     answers[el] = [];
 
     for (let i = 0; i < questions[el].length; i++) {
+
       if (questions[el][i] !== threeToFive.handwriting[0]) {
         if (el === "hyperactiveImpulsive" || el === "inattentive") {
-          score[el] += body[`${el}-${i + 1}`] === "Yes" ? 1 : 0;
+          score[el] += body[`${el}${i + 1}`] === "Yes" ? 1 : 0;
         } else {
-          score[el] += body[`${el}-${i + 1}`] === "Yes" ? 0 : 1;
+          score[el] += body[`${el}${i + 1}`] === "Yes" ? 0 : 1;
         }
       }
 
       answers[el].push({
         question: questions[el][i],
-        response: body[`${el}-${i + 1}`] == "Yes",
+        response: body[`${el}${i + 1}`] == "Yes",
       });
     }
   }
