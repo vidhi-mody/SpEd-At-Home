@@ -30,7 +30,7 @@ router.post("/general", async function (req, res, next) {
   if (reasonForReferral.includes("academic")) {
     res.redirect("/academic");
   } else {
-    res.redirect("/thank-you");
+    res.redirect("/parent-proficiency");
   }
 });
 
@@ -81,7 +81,7 @@ router.post("/academic-details", async (req, res, next) => {
     }
   );
 
-  res.redirect("/thank-you");
+  res.redirect("/parent-proficiency");
 });
 
 router.get("/thank-you", async (req, res, next) => {
