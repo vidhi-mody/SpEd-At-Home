@@ -41,12 +41,12 @@
   <div>
     <div class="mx-4">
       <div class="col-12">
-        <label for="nameOfApplications" class="form-label"
+        <label for="applicationsLaptop" class="form-label"
           >Name of the applications</label
         >
         <textarea
-          name="nameOfApplications"
-          id="nameOfApplications"
+          name="applicationsLaptop"
+          id="applicationsLaptop"
           class="form-control"
           required
         ></textarea>
@@ -316,9 +316,7 @@
             id="internetAvailability-limited"
             value="Limited daily use"
           />
-          <label
-            class="form-check-label"
-            for="internetAvailability-limited"
+          <label class="form-check-label" for="internetAvailability-limited"
             >Limited daily use</label
           >
         </div>
@@ -346,9 +344,7 @@
             id="parentalAvailability-available"
             value="Available during sessions for the project"
           />
-          <label
-            class="form-check-label"
-            for="parentalAvailability-available"
+          <label class="form-check-label" for="parentalAvailability-available"
             >Available during sessions for the project</label
           >
         </div>
@@ -365,15 +361,16 @@
           >
         </div>
         <div class="form-check">
+          <label class="form-check-label" for="parentalAvailabilitySource"
+            >If unavailable, name a dedicated source who can be present during
+            the sessions over 12 to 16 weeks</label
+          >
           <input
             type="text"
-            class="form-check-input"
-            name="parentalAvailability-source"
-            id="parentalAvailability-source"
+            class="form-control"
+            name="parentalAvailabilitySource"
+            id="parentalAvailabilitySource"
           />
-          <label class="form-check-label" for="parentalAvailability-source"
-            >If unavailable, name a dedicated source who can be present during the sessions over 12 to 16 weeks</label
-          >
         </div>
       </div>
 
@@ -387,9 +384,7 @@
             id="parentalProficiency-proficient"
             value="Proficient"
           />
-          <label
-            class="form-check-label"
-            for="parentalProficiency-proficient"
+          <label class="form-check-label" for="parentalProficiency-proficient"
             >Proficient</label
           >
         </div>
@@ -401,22 +396,25 @@
             id="parentalProficiency-not-proficient"
             value="Not proficient"
           />
-          <label class="form-check-label" for="parentalProficiency-not-proficient"
+          <label
+            class="form-check-label"
+            for="parentalProficiency-not-proficient"
             >Not proficient</label
           >
         </div>
         <div class="form-check">
+          <label class="form-label" for="parentalProficiencyHours"
+            >If proficient, what are the number of hours spent on the laptop /
+            device over the week?</label
+          >
           <input
             type="number"
-            class="form-check-input"
-            name="parentalProficiency-hours"
-            id="parentalProficiency-hours"
-            min = 1
-            max = 24
+            class="form-control"
+            name="parentalProficiencyHours"
+            id="parentalProficiencyHours"
+            min="1"
+            max="24"
           />
-          <label class="form-check-label" for="parentalAvailability-hours"
-            >If proficient, what are the number of hours spent on the laptop / device over the week?</label
-          >
         </div>
       </div>
 
@@ -430,9 +428,7 @@
             id="childProficiency-proficient"
             value="Proficient"
           />
-          <label
-            class="form-check-label"
-            for="childProficiency-proficient"
+          <label class="form-check-label" for="childProficiency-proficient"
             >Proficient</label
           >
         </div>
@@ -451,22 +447,22 @@
       </div>
 
       <div class="col-12">
-        <div class="mb-3">Current issues with online education faced by the child and the family</div>
+        <div class="mb-3">
+          Current issues with online education faced by the child and the family
+        </div>
         <div class="form-check">
-          <input
-            type="text"
-            class="form-check-input"
+          <label class="form-label" for="currentIssues"
+            >Describe briefly relevant issues for access to connectivity /
+            child’s behaviour during online classrooms / level of independence
+            of the child towards online education</label
+          >
+          <textarea
+            class="form-control"
             name="currentIssues"
             id="currentIssues"
-          />
-          <label
-            class="form-check-label"
-            for="childProficiency-proficient"
-            >Describe briefly relevant issues for access to connectivity / child’s behaviour during online classrooms / level of independence of the child towards online education</label
-          >
+          ></textarea>
         </div>
       </div>
-
     </div>
   </div>
 </div>

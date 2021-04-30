@@ -71,11 +71,12 @@ router.post("/academic-details", async (req, res, next) => {
   const { user } = req.session;
   const academic = new Set(user.academic);
 
-  const answers = util.populateAnswers(user.age, academic, req.body);
+  const { score, answers } = util.populateAnswers(user.age, academic, req.body);
 
   await User.updateOne(
     { userId: user.userId },
     {
+      score,
       answers,
     }
   );
@@ -97,6 +98,23 @@ router.get("/parent-proficiency", async (req, res, next) => {
     ...context,
     user,
   });
+});
+
+router.post("/parent-proficiency", async (req, res, next) => {
+  const { user } = req.session;
+
+  await User.updateOne(
+    {
+      userId: user.userId,
+    },
+    {
+      parent: {
+        ...req.body,
+      },
+    }
+  );
+
+  res.redirect("/thank-you");
 });
 
 module.exports = router;
