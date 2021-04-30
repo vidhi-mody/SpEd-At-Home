@@ -90,4 +90,13 @@ router.get("/thank-you", async (req, res, next) => {
   });
 });
 
+router.get("/parent-proficiency", async (req, res, next) => {
+  const { user } = req.session;
+
+  res.render("parent-proficiency", {
+    ...context,
+    user,
+  });
+});
+
 module.exports = router;

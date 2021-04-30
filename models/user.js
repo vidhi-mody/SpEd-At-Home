@@ -25,6 +25,13 @@ const userSchema = new mongoose.Schema({
     },
   ],
   answers: mongoose.Schema.Types.Mixed,
+  score: Number,
+  parentProficiency: {
+    childName: String,
+    email: String,
+    school: String,
+    mobile: String,
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

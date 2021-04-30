@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="bg-light">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <h2>SpEd At Home - Research Project</h2>
+        </div>
+        <div class="row g-5">
+          <div class="col-md">
+            <form
+              action="/parent-proficiency"
+              method="POST"
+              class="needs-validation"
+              novalidate=""
+            >
+              <div class="row g-3">
+                <h4
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="text-primary">General Details</span>
+                </h4>
+                <div class="col-md-6 col-sm-12">
+                  <label for="childName" class="form-label"
+                    >Name of the child</label
+                  >
+                  <input
+                    type="text"
+                    name="childName"
+                    id="childName"
+                    class="form-control"
+                    placeholder="Name of the child"
+                    value="<%= user.parentProficiency && user.parentProficiency.childName %>"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <label for="parentEmail" class="form-label"
+                    >Email ID of Parent</label
+                  >
+                  <input
+                    type="text"
+                    name="parentEmail"
+                    id="parentEmail"
+                    class="form-control"
+                    placeholder="Email ID of Parent"
+                    value="<%= user.parentProficiency &&
+                  user.parentProficiency.email %>"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <label for="school" class="form-label">Name of School</label>
+                  <input
+                    type="text"
+                    name="school"
+                    id="school"
+                    class="form-control"
+                    placeholder="Name of School"
+                    value="<%= user.parentProficiency &&
+                    user.parentProficiency.school %>"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <label for="mobile" class="form-label">Parent Mobile #</label>
+                  <input
+                    type="tel"
+                    name="mobile"
+                    id="mobile"
+                    class="form-control"
+                    placeholder="Parent Mobile Number"
+                    value="<%= user.parentProficiency &&
+                    user.parentProficiency.mobile %>"
+                    required
+                  />
+                </div>
+              </div>
+              <hr class="my-3" />
+              <%- include("./partials/parent-proficiency.ejs") -%>
+              <div class="d-flex w-100 justify-content-center">
+                <input type="submit" value="Next" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"
+  ></script>
+</html>
