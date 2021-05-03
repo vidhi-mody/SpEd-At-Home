@@ -70,6 +70,10 @@ const userSchema = new mongoose.Schema({
     childProficiency: String,
     currentIssues: String,
   },
+  completed: {
+    type: Boolean,
+    default: false
+  }
 });
 
 module.exports = mongoose.model("User", userSchema);

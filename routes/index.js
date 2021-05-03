@@ -111,6 +111,7 @@ router.post("/parent-proficiency", async (req, res, next) => {
       parent: {
         ...req.body,
       },
+      completed: true
     }
   );
 
