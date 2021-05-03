@@ -1,5 +1,5 @@
 module.exports = [
-  "Is the child able to complete notes, assessments & examinations on time (has incomplete notebooks)?",
+  "Is the child able to complete notes, assessments & examinations on time (has complete notebooks)?",
   "Can the child stay within the lines while following a maze / puzzle?",
   "Can the child organise materials in the required places (filing papers in the appropriate file or section of the file)?",
   "Is the child able to complete projects and assignments that require cutting, sticking and pacing things in an organised & sequential manner?",
