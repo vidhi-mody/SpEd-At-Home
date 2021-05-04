@@ -7,6 +7,11 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const userSchema = new mongoose.Schema({
   userId: String,
+  partnerOrganization: {
+    type: String,
+    enum: ["Ayush Medical & Research Centre", "Cheerful Children", "Vrudhi EdTech"],
+  },
+  referee: String,
   firstName: String,
   lastName: String,
   age: {

@@ -25,6 +25,39 @@
                   <span class="text-primary">General Details</span>
                 </h4>
                 <div class="col-sm-6">
+                  <label for="partnerOrganization" class="form-label">Select Partner Organization</label>
+                  <select 
+                    name="partnerOrganization" 
+                    id="partnerOrganization"
+                    class="form-control"
+                    placeholder="Name of Partner Organization"
+                    value="<%= user.partnerOrganization %>"
+                    required
+                    >
+                      <option label=" "></option>
+                      <option value="Ayush Medical & Research Centre">Ayush Medical & Research Centre</option>
+                      <option value="Cheerful Children">Cheerful Children</option>
+                      <option value="Vrudhi EdTech">Vrudhi EdTech</option>
+                      <span class="caret"></span></select>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="referee" class="form-label">Filled by</label>
+                  <input
+                    type="text"
+                    name="referee"
+                    id="referee"
+                    class="form-control"
+                    placeholder="Name of person filling the form"
+                    value="<%= user.referee %>"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
                   <label for="firstName" class="form-label">First name</label>
                   <input
                     type="text"

@@ -15,11 +15,13 @@ router.get("/", function (req, res, next) {
 
 router.post("/general", async function (req, res, next) {
   const user = req.session.user;
-  const { firstName, lastName, age, reasonForReferral } = req.body;
+  const { partnerOrganization, referee, firstName, lastName, age, reasonForReferral } = req.body;
 
   await User.updateOne(
     { userId: user.userId },
     {
+      partnerOrganization,
+      referee,
       firstName,
       lastName,
       age,
