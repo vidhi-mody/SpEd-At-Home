@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   userId: String,
   partnerOrganization: {
     type: String,
-    enum: ["Ayush Medical & Research Centre", "Cheerful Children", "Vrudhi EdTech"],
+    enum: ["Ayush Medical & Research Centre", "Cheerful Connect", "Vrudhi EdTech"],
   },
   referee: String,
   firstName: String,
